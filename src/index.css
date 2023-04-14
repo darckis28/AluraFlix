@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: white;
 }
 body{
   background-color:#1c1a1a ;
+  min-height:100vh ;
 }

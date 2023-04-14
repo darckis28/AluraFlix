@@ -9,6 +9,8 @@ const Container = styled.footer`
     background-color:${ColorOscuroOne};
     padding:30px;
     border-top:${ColorPrimario} solid 1px;
+    position:absolute;
+    bottom:0;
 `
 const Logo = styled.img`
     width:190px;
@@ -18,7 +20,7 @@ const Logo = styled.img`
 export const Footer =()=>{
     return(
         <Container>
-            <Logo src={logo} alt="logo" />
+            <Logo src={logo} alt="logo" title="Logo"/>
         </Container>
     )
 }

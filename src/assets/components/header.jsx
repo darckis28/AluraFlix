@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../img/logo.png"
+import { Link } from "react-router-dom";
 
 const Container = styled.header`
   width:100%;
@@ -31,12 +32,12 @@ const BotonNew = styled.a`
     }
 `
 
-export const Cabecera = () => {
+export const Cabecera = ({children,link}) => {
   return (
     <Container>
       <Navegador>
-            <Logo src={logo}/>
-            <BotonNew>Nuevo Video</BotonNew>
+      <Link to="/"><Logo src={logo} alt="Logo" title="Logo"/></Link>
+           <BotonNew> <Link to="/RegistrarVideo">Hola</Link></BotonNew> 
       </Navegador>
     </Container>
   );
