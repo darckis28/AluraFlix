@@ -20,21 +20,18 @@ const List = styled.li`
   padding: 2px 10px;
   text-align:center;
   background-color: transparent;
-  color: #fff;
+`;
+const Linka =styled(Link)`
+  color:white;
   border: #fff solid 1px;
   cursor: pointer;
   font-weight: 500;
-  :hover {
-    border-color: #2a7ae4;
-   
+  padding:5px 10px;
+  :hover{
+    color:#2a7ae4;
+    border-color:#2a7ae4;
   }
-  a {
-    color: white;
-    :hover{
-       color: #2a7ae4;
-    }
-  }
-`;
+`
 const Logo = styled.img`
   width: 150px;
 `;
@@ -52,10 +49,10 @@ export const Cabecera = () => {
         </Link>
         <Navigator>
           <List>
-            <Link to="/RegistrarVideo">Nuevo video</Link>
+            <Linka to="/RegistrarVideo">Nuevo video</Linka>
           </List>
           <List>
-            <Link to="/RegistrarCategoria">Nuevo categoria</Link>
+            <Linka to="/RegistrarCategoria">Nuevo categoria</Linka>
           </List>
         </Navigator>
       </Navegador>

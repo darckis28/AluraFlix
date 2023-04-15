@@ -7,7 +7,12 @@ export const Register = () => {
     <>
       <TitleGeneral>Nuevo Video</TitleGeneral>
       <ContainerG>
-        <InputText/>
+        <form>
+           <InputText title="Titulo"/> 
+           <InputText title="Link del video"/> 
+           <InputText title="Link del imagen"/> 
+        </form>
+        
       </ContainerG>
     </>
   );

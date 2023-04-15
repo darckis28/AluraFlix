@@ -1,31 +1,46 @@
 import styled from "styled-components";
+import { colores } from "../colors/Colors";
+ const{ColorPrimario,ColorOscurofour}=colores;
 const Container = styled.div`
   width: 90%;
-  margin: 5px auto;
+  margin: 5px auto 20px auto;
   position: relative;
 `;
 const StyletLabel = styled.label`
   position: absolute;
-  left: 0;
+  padding: 0 8px;
+  left: 8px;
   top: 0;
-  padding: calc(var(--size-bezel) * 0.75);
-  color:black;
+  background-color:#1c1a1a;
+  color:${ColorOscurofour};
+  transform:translateY(8px);
+  transition: transform  0.5s ease,color .3s;
+
 `;
 const StyletInput = styled.input`
   width: 100%;
-  border:none;
+  padding:8px 15px;
+  border:${ColorPrimario} 1px solid;
+  border-radius:3px;
+  background-color:#1c1a1a;
   outline:none;
   color:red;
   font-size:1rem;
-  :focus + label{
-    color:red;
-  } 
+  :focus{
+    border-style:dashed;
+  }
+  :focus + label,
+  :not(:placeholder-shown)+label{
+    transform:translateY(-9px) scale(.7);
+    transform-origin:left top;
+    color:${ColorPrimario}
+  }
 `;
-export const InputText = () => {
+export const InputText = ({title}) => {
   return (
     <Container>
-      <label>abecerass</label>
-      <StyletInput />
+      <StyletInput id={title}  placeholder=" "/>
+      <StyletLabel for={title}>{title}</StyletLabel>
     </Container>
   );
 };
