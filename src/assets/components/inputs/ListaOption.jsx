@@ -21,7 +21,7 @@ const StyletLabel = styled.label`
   transition: transform  0.5s ease,color .3s;
 
 `;
-const StyletInput = styled.input`
+const StyletSelect = styled.select`
   width: 100%;
   padding:8px 15px;
   border:${ColorPrimario} 1px solid;
@@ -34,16 +34,21 @@ const StyletInput = styled.input`
     border-style:dashed;
   }
   :focus + label,
-  :not(:placeholder-shown)+label{
+  :not(:placeholder-shown )+ label{
     transform:translateY(-9px) scale(.7);
     transform-origin:left top;
     color:${ColorPrimario}
   }
 `;
-export const InputText = ({title,type}) => {
+export const SelectOption = ({title,type}) => {
   return (
     <Container>
-      <StyletInput className={type} id={title} type={type} placeholder=" "/>
+      <StyletSelect value="" className={type} id={title} type={type} placeholder=" ">
+        <option value="" disabled defaultValue="" hidden></option>
+        <option value="">wwww</option>
+        <option value="">www</option>
+        <option value="">www</option>
+      </StyletSelect>
       <StyletLabel htmlFor={title}>{title}</StyletLabel>
     </Container>
   );

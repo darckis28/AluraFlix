@@ -5,10 +5,6 @@ const Container = styled.div`
   width: 90%;
   margin: 5px auto 20px auto;
   position: relative;
-  .color{
-    height:50px;
-    padding:5px;
-  }
 `;
 const StyletLabel = styled.label`
   position: absolute;
@@ -21,8 +17,10 @@ const StyletLabel = styled.label`
   transition: transform  0.5s ease,color .3s;
 
 `;
-const StyletInput = styled.input`
+const StyleTarea = styled.textarea`
   width: 100%;
+  height:150px;
+  resize:none;
   padding:8px 15px;
   border:${ColorPrimario} 1px solid;
   border-radius:3px;
@@ -40,11 +38,12 @@ const StyletInput = styled.input`
     color:${ColorPrimario}
   }
 `;
-export const InputText = ({title,type}) => {
+export const Textarea = ({title}) => {
   return (
     <Container>
-      <StyletInput className={type} id={title} type={type} placeholder=" "/>
+      <StyleTarea id={title} placeholder=" "/>
       <StyletLabel htmlFor={title}>{title}</StyletLabel>
     </Container>
   );
 };
+          

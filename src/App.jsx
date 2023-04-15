@@ -10,7 +10,7 @@ import { RegistrarCat } from "./assets/pages/resgisyerCat/RegistrarCat";
 const Contenedor = styled.div`
   min-height:100vh;
   position:relative;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 `
 
 function App() {

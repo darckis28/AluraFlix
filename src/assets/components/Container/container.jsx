@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const ContainerGlob = styled.div`
      width:80%;
-     margin:20px auto;
+     margin:20px auto 400px auto;
      height:50px;
 `
 
