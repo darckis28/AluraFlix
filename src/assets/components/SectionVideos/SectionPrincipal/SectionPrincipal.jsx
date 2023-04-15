@@ -3,6 +3,7 @@ import imagen from "../../../img/imagen.webp";
 import { TitleCAt } from "../../title/Title";
 import { colores } from "../../colors/Colors";
 import { Imagen } from "../../Imagen/imagen";
+import { useState, useEffect } from "react";
 const { ColorGrayThree } = colores;
 
 const Container = styled.article`
@@ -26,15 +27,18 @@ const Descripcion = styled.p`
   text-align: justify;
   color: ${ColorGrayThree};
 `;
-export const SectionPrincipal = () => {
+export const SectionPrincipal = ({ categorias }) => {
+  const [cat, setCat] = useState({});
+  useEffect(() => {
+    categorias.map((categoria) => {
+      categoria.title === "Comedia" && setCat(categoria);
+    });
+  }, []);
   return (
     <Container>
       <ContainerInit>
         <div>
-            <TitleCAt tamaño="big" color="red">
-             Comedia
-            </TitleCAt>
-          
+          <TitleCAt tamaño="big" color={cat.color}>{cat.title}</TitleCAt>
 
           <TitlePrincipal>Challenge React AluraFlix</TitlePrincipal>
           <Descripcion>
@@ -45,7 +49,7 @@ export const SectionPrincipal = () => {
           </Descripcion>
         </div>
 
-        <Imagen color="red" tamaño="medium" />
+        <Imagen color={cat.color} tamaño="medium" />
       </ContainerInit>
     </Container>
   );
