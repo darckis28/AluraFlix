@@ -4,7 +4,7 @@ import { Register } from "./assets/pages/register/Register";
 import styled from "styled-components";
 import { Cabecera } from "./assets/components/header";
 import { Footer } from "./assets/components/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RegistrarCat } from "./assets/pages/resgisyerCat/RegistrarCat";
 import { Trailer } from "./assets/pages/Trailer/Trailer";
 
@@ -90,11 +90,29 @@ function App() {
     },
   ]);
   const AgregarVideos = (video)=>{
-    setVideos([...videos,video])
+    const newVideos =[...videos,video];
+    localStorage.setItem("Videos",JSON.stringify(newVideos))
+    setVideos(newVideos)
   }
   const AgregarCategoria = (categoria)=>{
-    Setcategorias([...categorias,categoria])
+    const newCAtegoria =[...categorias,categoria];
+    localStorage.setItem("Categoria",JSON.stringify(newCAtegoria))
+    Setcategorias(newCAtegoria)
   }
+  (()=>{
+    useEffect(()=>{
+      const getVideos = JSON.parse(localStorage.getItem("Videos"))
+      getVideos=== null?"":Setcategorias(getVideos)
+    },[])
+    
+  })();
+  (()=>{
+    useEffect(()=>{
+      const getCategoria = JSON.parse(localStorage.getItem("Categoria"))
+      getCategoria=== null?"":setVideos(getCategoria)
+    },[])
+    
+  })();
 
   return (
     <Contenedor>
