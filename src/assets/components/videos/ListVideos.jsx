@@ -20,9 +20,10 @@ export const ListVideos = ({ videos, color }) => {
   return (
     <ContainerItems>
       {videos.map((video) => (
+       
         <Items key={video.id}>
           <Linksd to={"/trailer/"+video.id}> 
-            <Imagen tamaño="small" imagen={video.img} color={color} />
+            <Imagen tamaño="small" descrip={video.titulo} imagen={video.img} color={color} />
           </Linksd>
          
         </Items>

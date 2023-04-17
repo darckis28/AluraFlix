@@ -55,7 +55,7 @@ export const SectionPrincipal = ({videos}) => {
           </Descripcion>
         </div>
 
-        <Imagen color="#1facdf" imagen={video.img} tamaño="medium" />
+        <Imagen color="#1facdf" descrip={video.titulo}  imagen={video.img} tamaño="medium" />
       </ContainerInit>
     </Container>
   );
