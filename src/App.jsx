@@ -102,15 +102,15 @@ function App() {
   (()=>{
     useEffect(()=>{
       const getVideos = JSON.parse(localStorage.getItem("Videos"))
-      getVideos=== null?"":Setcategorias(getVideos)
+      getVideos=== null?"":setVideos(getVideos)
     },[])
     
   })();
   (()=>{
     useEffect(()=>{
       const getCategoria = JSON.parse(localStorage.getItem("Categoria"))
-      getCategoria=== null?"":setVideos(getCategoria)
-    },[])
+      getCategoria=== null?"":Setcategorias(getCategoria)
+    },[Setcategorias])
     
   })();
 
