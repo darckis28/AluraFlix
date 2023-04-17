@@ -63,7 +63,7 @@ function App() {
     },
     {
       titulo: "Los pingüinos de papá",
-      video: "https://youtu.be/VSVBFfZ65Aw",
+      video: "https://www.youtube.com/embed/VSVBFfZ65Aw",
       img: "https://4.bp.blogspot.com/-BfVFFJeHND0/VW6iANv1r9I/AAAAAAAAAKY/cRzPjck4Hao/s1600/POSTER_pinguinos_popper-800x600-312x450.jpg",
       categoria: "Comedia",
       descripcion:

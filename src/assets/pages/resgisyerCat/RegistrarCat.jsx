@@ -8,7 +8,7 @@ import { useState } from "react";
 
 
 export const RegistrarCat = ({AgregarCategoria}) => {
-  const [titulo,setTitulo]=useState("");
+  const [title,setTitulo]=useState("");
   const [color,setColor]=useState("");
   const [descripcion,setDescripcion]=useState("");
   const [id,setId]=useState("");
@@ -26,14 +26,14 @@ export const RegistrarCat = ({AgregarCategoria}) => {
   }
   const registrarCatg = (e)=>{
     e.preventDefault()
-    console.log("hola")
     let nuevCategoria ={
-      titulo,
+      title,
       color,
       id,
       descripcion
     }
     AgregarCategoria(nuevCategoria)
+    e.target.reset();
   }
   return (
     <>

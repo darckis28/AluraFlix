@@ -1,7 +1,7 @@
 import styled from "styled-components"
 const Tamaño={
     small:"200px",
-    medium:"300px",
+    medium:"270px",
     big:"420px"
 }
 const StyledImg = styled.img`
