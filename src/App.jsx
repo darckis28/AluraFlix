@@ -32,14 +32,17 @@ function App() {
       color:"#9CD33B"
     }
   ])
+  const[videos,setVideos]=useState({})
+  const[category,setCategory]=useState({})
+    
 
   return (
       <Contenedor>
         <Cabecera/>
         <Routes>
         <Route path="/" element={<Home categorias={categorias}/>}/>
-        <Route path="/registrarVideo" element={<Register/>}/>
-        <Route path="/registrarCategoria" element={<RegistrarCat/>}/>
+        <Route path="/registrarVideo" element={<Register setVideos={setVideos} categorias={categorias}/>}/>
+        <Route path="/registrarCategoria" element={<RegistrarCat setCategory={setCategory}/>} />
       </Routes>
       <Footer/>
       </Contenedor>

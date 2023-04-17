@@ -14,6 +14,11 @@ const Navegador = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  @media (max-width:450px) {
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+  }
 `;
 const List = styled.li`
   list-style: none;

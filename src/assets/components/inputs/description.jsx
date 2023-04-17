@@ -38,10 +38,10 @@ const StyleTarea = styled.textarea`
     color:${ColorPrimario}
   }
 `;
-export const Textarea = ({title}) => {
+export const Textarea = ({title,actualizarValor}) => {
   return (
     <Container>
-      <StyleTarea id={title} placeholder=" "/>
+      <StyleTarea onChange={actualizarValor} id={title} placeholder=" "/>
       <StyletLabel htmlFor={title}>{title}</StyletLabel>
     </Container>
   );

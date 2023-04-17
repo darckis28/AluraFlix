@@ -1,8 +1,7 @@
 import { SectionPrincipal } from "../../components/SectionVideos/SectionPrincipal/SectionPrincipal";
 
 
-export const Home = (props) => {
-  const {categorias}=props;
+export const Home = ({categorias}) => {
   return (
       <SectionPrincipal categorias={categorias}/>
   );

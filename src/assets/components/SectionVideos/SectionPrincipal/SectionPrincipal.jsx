@@ -19,6 +19,13 @@ const ContainerInit = styled.div`
   div {
     width: 50%;
   }
+  @media (max-width:450px) {
+    flex-direction:column;
+    gap:15px;
+    div {
+    width: 80%;
+  }
+  }
 `;
 const TitlePrincipal = styled.h1`
   color: ${ColorGrayThree};
