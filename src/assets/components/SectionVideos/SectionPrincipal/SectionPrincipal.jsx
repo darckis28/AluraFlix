@@ -48,10 +48,7 @@ export const SectionPrincipal = ({videos}) => {
 
           <TitlePrincipal>Challenge React AluraFlix</TitlePrincipal>
           <Descripcion>
-            La comedia es el subgénero teatral de la risa. Es una manera de
-            representar los conflictos sencillos y cotidianos subrayando el lado
-            divertido o ridículo de la vida. Se opone a la tragedia tanto en su
-            finalidad como en los personajes y los temas que trata.
+          El trailer es importante porque a veces con sólo verlo, la gente decide si quiere ver o no esa película, incluso desde el poster, no importa que la película sea buena. Una vez que se termina el trailer, debe pasar por muchos ojos, tanto productores, directores y público para medir sus reacciones.
           </Descripcion>
         </div>
 
