@@ -34,18 +34,17 @@ const Descripcion = styled.p`
   text-align: justify;
   color: ${ColorGrayThree};
 `;
-export const SectionPrincipal = ({ categorias }) => {
-  const [cat, setCat] = useState({});
-  useEffect(() => {
-    categorias.map((categoria) => {
-      categoria.title === "Comedia" && setCat(categoria);
-    });
-  }, []);
+export const SectionPrincipal = ({videos}) => {
+  const [video, setVideo] = useState({});
+  useEffect(()=>{
+    setVideo(videos[0])
+  },[])
+  
   return (
     <Container>
       <ContainerInit>
         <div>
-          <TitleCAt tamaño="big" color={cat.color}>{cat.title}</TitleCAt>
+          <TitleCAt tamaño="big" color="#1facdf">Trailers</TitleCAt>
 
           <TitlePrincipal>Challenge React AluraFlix</TitlePrincipal>
           <Descripcion>
@@ -56,7 +55,7 @@ export const SectionPrincipal = ({ categorias }) => {
           </Descripcion>
         </div>
 
-        <Imagen color={cat.color} tamaño="medium" />
+        <Imagen color="#1facdf" imagen={video.img} tamaño="medium" />
       </ContainerInit>
     </Container>
   );

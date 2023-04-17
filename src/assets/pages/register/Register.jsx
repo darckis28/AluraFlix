@@ -6,12 +6,13 @@ import { SelectOption } from "../../components/inputs/ListaOption";
 import { Textarea } from "../../components/inputs/description";
 import { TitleGeneral } from "../../components/title/TitleGneral";
 
-export const Register = ({categorias,setVideos}) => {
+export const Register = ({categorias,AgregarVideos}) => {
   const [titulo,setTitulo]=useState("");
   const [video,setVideo]=useState("");
   const [img,setImg]=useState("");
   const [categoria,setCategoria]=useState("");
   const [descripcion,setDescripcion]=useState("");
+  const [id,setID]=useState("");
   const ActualizarNombre = (e)=>{
     setTitulo(e.target.value)
   }
@@ -24,6 +25,9 @@ export const Register = ({categorias,setVideos}) => {
   const ActualizarDescripcion = (e)=>{
     setDescripcion(e.target.value)
   }
+  const ActualizarId = (e)=>{
+    setID(e.target.value)
+  }
   const registrarVideo=(e)=>{
     e.preventDefault()
     let nuevoVideo ={
@@ -31,9 +35,11 @@ export const Register = ({categorias,setVideos}) => {
       video,
       img,
       categoria,
-      descripcion
+      descripcion,
+      id
     }
-    setVideos(nuevoVideo)
+    AgregarVideos(nuevoVideo)
+    e.target.reset();
   }
   return (
     <>
@@ -45,6 +51,7 @@ export const Register = ({categorias,setVideos}) => {
            <InputText actualizarValor={ActualizarImg}  title="Link del imagen"/>
            <SelectOption  setCategoria={setCategoria} categorias={categorias} title="Selecciona Categoria"/>
            <Textarea  actualizarValor={ActualizarDescripcion} title="Describe la categoria"></Textarea> 
+           <InputText actualizarValor={ActualizarId}  title="Codigo de seguridad"/>
            <BotonChill>Agregar</BotonChill>
         </form>
         

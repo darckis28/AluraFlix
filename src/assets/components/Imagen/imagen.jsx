@@ -9,5 +9,5 @@ const StyledImg = styled.img`
     cursor: pointer;
 `
 export const Imagen = ({color,tamaño,imagen})=>{
- return (<StyledImg src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/media/imagenes/recursos/la-tribu_poster/137826767-1-esl-ES/La-Tribu_Poster.jpg?resize=480:*" style={{borderColor:color ,width:Tamaño[tamaño]}}/> )
+ return (<StyledImg src={imagen} style={{borderColor:color ,width:Tamaño[tamaño]}}/> )
 }

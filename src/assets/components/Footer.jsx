@@ -5,12 +5,12 @@ import{colores} from "./colors/Colors"
 const {ColorOscuroOne,ColorPrimario}=colores;
 
 const Container = styled.footer`
+    position:absolute;
+    bottom:0;
     width:100%;
     background-color:${ColorOscuroOne};
     padding:30px;
     border-top:${ColorPrimario} solid 1px;
-    position:absolute;
-    bottom:0;
 `
 const Logo = styled.img`
     width:190px;

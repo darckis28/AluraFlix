@@ -7,7 +7,7 @@ import { BotonChill } from "../../components/Botons/Boton";
 import { useState } from "react";
 
 
-export const RegistrarCat = ({setCategory}) => {
+export const RegistrarCat = ({AgregarCategoria}) => {
   const [titulo,setTitulo]=useState("");
   const [color,setColor]=useState("");
   const [descripcion,setDescripcion]=useState("");
@@ -33,7 +33,7 @@ export const RegistrarCat = ({setCategory}) => {
       id,
       descripcion
     }
-    setCategory(nuevCategoria)
+    AgregarCategoria(nuevCategoria)
   }
   return (
     <>
